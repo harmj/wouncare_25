@@ -1,0 +1,20 @@
+# Exporteer Markdown naar Word of PDF met Pandoc
+
+1. Installeer Pandoc en LaTeX-engine (bv. xelatex)
+2. Zorg dat referenties.bib en apa.csl in referenties/ staan
+3. Voer uit:
+
+pandoc tekst/rapport.md \
+--from markdown \
+--to docx \
+--output output/rapport.docx \
+--bibliography=referenties/referenties.bib \
+--csl=referenties/apa.csl
+
+Of voor PDF:
+
+pandoc tekst/rapport.md \
+--pdf-engine=xelatex \
+--output output/rapport.pdf \
+--bibliography=referenties/referenties.bib \
+--csl=referenties/apa.csl
